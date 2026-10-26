@@ -9,15 +9,13 @@ function OrderSummary({ order, onUpdateQuantity, onRemoveProduct }) {
   return (
     <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
       <h2 className="mb-5 text-xl font-bold text-slate-900">
-        Your Order
+        Your order
       </h2>
 
       {/* Empty Order Message */}
       {order.length === 0 ? (
         <div className="py-8 text-center">
-          <p className="text-slate-500">
-            Your order is empty.
-          </p>
+          <p className="text-slate-500">Your order is empty.</p>
           <p className="mt-2 text-sm text-slate-400">
             Add products to get started.
           </p>

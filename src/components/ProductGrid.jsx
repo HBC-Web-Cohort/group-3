@@ -1,22 +1,14 @@
 
 import ProductCard from "./ProductCard";
 
-function ProductGrid({ products, selectedCategory, onAddToOrder }) {
-  // Filter products based on the selected category.
-  const filteredProducts =
-    selectedCategory === "All"
-      ? products
-      : products.filter(
-          (product) => product.category === selectedCategory
-        );
-
+function ProductGrid({ products, onAddToOrder }) {
   return (
     <section className="flex-1">
       {/* Section Heading */}
       <div className="mb-6 flex items-center justify-between gap-3">
         <div>
           <h2 className="text-2xl font-bold text-slate-900">
-            Featured Products
+            Featured products
           </h2>
 
           <p className="mt-1 text-sm text-slate-500">
@@ -25,14 +17,14 @@ function ProductGrid({ products, selectedCategory, onAddToOrder }) {
         </div>
 
         <span className="whitespace-nowrap rounded-full bg-orange-100 px-3 py-1 text-sm font-semibold text-orange-700">
-          {filteredProducts.length} items
+          {products.length} items
         </span>
       </div>
 
       {/* Responsive Product Grid */}
-      {filteredProducts.length > 0 ? (
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {filteredProducts.map((product) => (
+      {products.length > 0 ? (
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {products.map((product) => (
             <ProductCard
               key={product.id}
               product={product}
