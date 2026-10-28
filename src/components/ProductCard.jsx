@@ -1,13 +1,13 @@
 
 function ProductCard({ product, onAddToOrder }) {
   return (
-    <article className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-lg">
+    <article className="min-w-0 w-full overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-lg">
       {/* Product Image */}
       <div className="relative flex h-48 items-center justify-center overflow-hidden bg-slate-100 p-3">
         <img
           src={product.image}
           alt={product.name}
-          className="h-full w-full rounded-lg object-cover transition-transform duration-300 hover:scale-105"
+          className="h-full min-w-0 w-full max-w-full rounded-lg object-cover transition-transform duration-300 hover:scale-105"
         />
 
         {/* Category Badge */}

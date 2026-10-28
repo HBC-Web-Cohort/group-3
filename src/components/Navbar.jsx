@@ -2,7 +2,7 @@
 function Navbar({ searchQuery, onSearchChange, orderCount = 0 }) {
   return (
     <header className="bg-slate-900 text-white shadow-md">
-      <nav className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 md:flex-row md:items-center md:justify-between">
+      <nav className="mx-auto flex min-w-0 max-w-7xl flex-col gap-4 px-4 py-4 md:flex-row md:items-center md:justify-between">
         {/* Logo */}
         <a
           href="#home"
@@ -12,7 +12,7 @@ function Navbar({ searchQuery, onSearchChange, orderCount = 0 }) {
         </a>
 
         {/* Search */}
-        <div className="w-full md:max-w-md">
+        <div className="min-w-0 w-full md:max-w-md">
           <label htmlFor="product-search" className="sr-only">
             Search products
           </label>
@@ -28,7 +28,7 @@ function Navbar({ searchQuery, onSearchChange, orderCount = 0 }) {
         </div>
 
         {/* Navigation */}
-        <div className="flex items-center gap-5 text-sm font-medium">
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium">
           <a
             href="#home"
             className="transition-colors hover:text-orange-400"
@@ -37,7 +37,7 @@ function Navbar({ searchQuery, onSearchChange, orderCount = 0 }) {
           </a>
 
           <a
-            href="#products"
+            href="#categories"
             className="transition-colors hover:text-orange-400"
           >
             Categories

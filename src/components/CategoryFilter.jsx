@@ -9,12 +9,12 @@ const categories = [
 
 function CategoryFilter({ selectedCategory, onCategoryChange }) {
   return (
-    <aside className="w-full lg:w-56 lg:shrink-0">
+    <aside id="categories" className="min-w-0 w-full lg:w-56 lg:shrink-0">
       <h2 className="mb-4 text-lg font-bold text-slate-900">
         Categories
       </h2>
 
-      <div className="flex gap-2 overflow-x-auto pb-2 lg:flex-col lg:overflow-visible">
+      <div className="flex max-w-full gap-2 overflow-x-auto pb-2 lg:flex-col lg:overflow-visible">
         {categories.map((category) => {
           const isActive = selectedCategory === category;
 

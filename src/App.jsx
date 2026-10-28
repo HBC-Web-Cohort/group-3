@@ -35,12 +35,12 @@ function App() {
 
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <div className="min-h-screen overflow-x-hidden bg-slate-50 text-slate-900">
       <Navbar searchQuery={searchQuery} onSearchChange={setSearchQuery} orderCount={orderCount} />
-      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <main className="mx-auto w-full max-w-7xl overflow-x-hidden px-4 py-8 sm:px-6 lg:px-8">
         <div className="mb-8 max-w-2xl"><p className="text-sm font-bold uppercase tracking-[0.18em] text-orange-600">SportStore collection</p><h1 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">Gear up for your next win.</h1><p className="mt-3 text-slate-600">Shop dependable equipment for the sports you love.</p></div>
         {notice && <div role="status" className="mb-6 flex items-center justify-between rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-800"><span>{notice}</span><button onClick={() => setNotice("")} className="text-emerald-700" aria-label="Dismiss message">×</button></div>}
-      <div className="grid gap-8 xl:grid-cols-[220px_minmax(0,1fr)_330px]">
+      <div className="grid min-w-0 gap-8 xl:grid-cols-[220px_minmax(0,1fr)_330px]">
         <CategoryFilter
           selectedCategory={selectedCategory}
           onCategoryChange={setSelectedCategory}

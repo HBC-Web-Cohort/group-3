@@ -3,11 +3,11 @@ import ProductCard from "./ProductCard";
 
 function ProductGrid({ products, onAddToOrder }) {
   return (
-    <section className="flex-1">
+    <section className="min-w-0 w-full">
       {/* Section Heading */}
-      <div className="mb-6 flex items-center justify-between gap-3">
-        <div>
-          <h2 className="text-2xl font-bold text-slate-900">
+      <div className="mb-6 flex min-w-0 items-center justify-between gap-3">
+        <div className="min-w-0">
+          <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">
             Featured products
           </h2>
 
@@ -16,7 +16,7 @@ function ProductGrid({ products, onAddToOrder }) {
           </p>
         </div>
 
-        <span className="whitespace-nowrap rounded-full bg-orange-100 px-3 py-1 text-sm font-semibold text-orange-700">
+        <span className="shrink-0 whitespace-nowrap rounded-full bg-orange-100 px-3 py-1 text-sm font-semibold text-orange-700">
           {products.length} items
         </span>
       </div>
